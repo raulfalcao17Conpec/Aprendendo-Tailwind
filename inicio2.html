@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Números</title>
+    <link rel="stylesheet" href="../dist/output.css">
+</head>
+<body class="h-screen bg-gradient-to-r from-blue-400 via-blue-300 to-blue-200">
+        <h1 class="h-1/4 mt-8 text-white text-5xl text-center font-sans font-bold">ANALISADOR DE NÚMEROS</h1>
+        <div class="w-1/2 h-1/2 mx-auto bg-white">
+            <div class="px-5 h-1/4 flex flex-row justify-between flex items-center bg-white">
+                <p class="text-2xl">Número (entre 1 e 100):</p>
+                <input type="text" id="fnum" placeholder="Insira um número" class="border-2 border-black bg-gray-400">
+                <input type="button" id="add" value="Adicionar" class="px-2 bg-black text-white rounded-md" onclick="adicionar()">
+            </div>
+            <div class="px-5 h-2/4 flex items-start space-x-5"> <!--Naturalmente, por padrão, o flex é row!-->
+                <div class="flex flex-col space-y-4 w-1/3">
+                    <select  id="flista" size="6" class="border-2 border-black w-2/4 mt-5 ml-5 rounded-sm p-2"></select>
+                    <input type="button" value="Finalizar" class="px-2 ml-5 bg-black text-white mt-4 rounded-md" onclick="finalizar()">
+                </div>
+                <div id="res" class="font-bold p-2 rounded-sm"></div>
+            </div>
+            <!--Tags input são do tipo inline (ou seja, ocupam apenas o tamanho limitado pelo seu conteúdo).
+            Já as divs,se não especificada,ocupam largura total pré-defenidaa-->
+        </div>
+        <script src="script.js"></script>
+
+</body> 

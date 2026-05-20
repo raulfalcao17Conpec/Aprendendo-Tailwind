@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raul´s Bikeshop</title>
+    <link rel="stylesheet" href="./dist/output.css"> 
+</head>
+<!--Tailwind é mobile first! Ou seja, devemos pensar primeiro em como queremos no celular para depois configurarmos
+para tablets e computadores, colocando o md. -->
+<!--Importante: diferença crucial entre o flexbox e o grid: No flexbox, o tamanho do contéudo dita o layout; no grid, 
+o layout dita o tamanho-->
+<body class="bg-white">
+    <header class="bg-[#FEC918] h-auto font-sans text-black font-bold">
+        <div class="w-full h-full max-w-6xl mx-auto px-4 flex flex-col items-center md:flex-row md:justify-around md:items-center">
+            <img class="w-24 mb-6 mt-4 max-w-xs" src="https://bikcraft.com/wp-content/themes/bikcraft/img/bikcraft.svg" alt="Descrição da imagem">
+            <ul class="grid grid-cols-2 gap-3 mb-4 md:flex md:flex-row"> <!--Melhor trabalhar com grid para adequar à responsividade adequada-->
+                <li class="border-4 border-black hover:text-white hover:border-white text-sm text-center p-2 tracking-widest md:border-0 my-auto">SOBRE</li>
+                <li class="border-4 border-black hover:text-white hover:border-white text-sm text-center p-2 tracking-widest md:border-0 my-auto">PRODUTOS</li>
+                <li class="border-4 border-black hover:text-white hover:border-white text-sm text-center p-2 tracking-widest md:border-0 my-auto">PORTFÓLIO</li> 
+                <li class="border-4 border-black hover:text-white hover:border-white text-sm text-center p-2 tracking-widest md:border-0 my-auto">CONTATO</li>
+                <li class="border-4 border-black hover:text-white hover:border-white text-sm text-center p-2 tracking-widest md:border-0 my-auto">BLOG</li>
+        </ul>
+        </div>
+    </header>
+    <div class="bg-[url(https://bikcraft.com/wp-content/uploads/2015/10/bg.jpg)] bg-cover bg-center h-[380px]  bg-no-repeat">
+        <div class="flex flex-col  m-auto flex justify-center flex items-center">
+            <h1 class="font-sans font-bold text-white text-5xl mt-8 text-center">BICICLETAS FEITAS A MÃO</h1>
+            <div class="w-16 h-1 bg-white mx-auto my-4"></div>
+            <h3 class="text-white font-bold tex-sm w-96 text-center"><q>Não tenha nada em sua casa que você não considere útil ou acredita ser bonito</q></h2>
+            <div class="w-16 h-1 bg-white mx-auto my-4"></div>
+            <h2 class="text-white font-sans font-bold p-5">ALBERT EISTEIN</h2>
+            <button class="text-[#F6C03C] p-3 font-bold border border-[#F6C03C] border-2 hover:text-white hover:border-white">ORÇAMENTO</button>
+        </div>
+    </div>
+    <div class="flex flex-col flex-justify-center flex items-center mb-2">
+        <p class="tracking-widest text-2xl text-black font-bold font-sans pt-15 m-auto">PRODUTOS</p>
+        <div class="w-16 h-1 bg-black mx-auto my-4"></div>
+    </div>
+    <div class="grid grid-cols-1 gap-6 px-3 mx-auto max-w-md py-12 md:grid-cols-3 md:max-w-5xl text-center"> <!--Melhor para responsividade: pensar em h-auto + padding y-->
+         <!--A melhor opção aqui é usar o grid porque ele "obriga" cada "subdiv" até a mesma largura. Usando o flex, as fotos
+        as divs acabavam tendo larguras diferentes-->
+        <div class="bg-black h-full flex flex-col justify-between text-white mb-5">
+            <img class="mx-auto bg-black" src="https://bikcraft.com/wp-content/uploads/2019/08/passeio.svg" alt="Descrição da imagem">
+            <p class="bg-[#F6C03C] w-full font-sans text-black tracking-widest text-center p-2 text-sm"> <b>PASSEIO</b><br>Muito melhor que passear pela orla de vidros fechados</p>
+        </div>
+        <div class="bg-black h-full flex flex-col justify-between text-white mb-5">
+            <img class="m-auto bg-black" src="https://bikcraft.com/wp-content/uploads/2015/11/esporte.svg" alt="Descrição da imagem">
+            <p class="bg-[#F6C03C] w-full font-sans text-black tracking-widest text-center p-2 text-sm"> <b>ESPORTE</b><br>Mais rápida que o Sonic! Ninguém te segura</p>
+        </div>
+        <div class="bg-black h-full flex flex-col justify-between text-white mb-3">
+            <img class="m-auto bg-black" src="https://bikcraft.com/wp-content/uploads/2015/11/retro.svg" alt="Descrição da imagem">
+            <p class="bg-[#F6C03C] w-full font-sans text-black tracking-widest text-center p-2 text-sm"> <b>RETRÔ</b><br>O passado volta para lembrarmos o que devemos fazer no futuro</p>
+        </div>
+    </div>
+        <h3 class="text-center">clique aqui e veja os detalhes dos produtos</h3>
+        <button class="block mx-auto my-3 text-[#F6C03C] p-3 font-bold border border-[#F6C03C] border-2 hover:text-black hover:border-black ">PRODUTOS</button>
+        <!--A tag 'button' é inline. Para alinharmos sem precisar envolver uma div, achei melhor
+        fazer a "conversão" para ela virar block e quebrar linha, assim como uma div-->
+        <div class="mt-10 bg-black h-auto flex flex-col items-center py-12 md:py-28 text-center">
+            <h2 class="pt-4 m-auto text-[#F6C03C] font-bold text-2xl tracking-widest">PORTFÓLIO</h2>
+            <div class="w-16 h-1 bg-[#F6C03C] mx-auto my-4"></div>
+                <div class="grid grid-cols-1 gap-4 px-8 mx-auto max-w-md md:grid-cols-2 md:max-w-3xl lg:max-w-4xl">
+                    <img class="w-full h-48 md:h-64 object-cover" src="https://bikcraft.com/wp-content/uploads/2015/10/passeio.jpg">
+                    <img class="w-full h-48 md:h-64 object-cover" src="https://bikcraft.com/wp-content/uploads/2015/10/retro.jpg">
+                    <img class=" w-full h-32 md:col-span-2 md:h-80 object-cover" src="https://bikcraft.com/wp-content/uploads/2015/10/esporte.jpg">
+                    <!--Importante: Quando colocamos 'w-full', a imagem ocupará toda a width da coluna a que ela
+                    foi alocada quando definimos o layout de grid!-->
+                    <!--Importante: Quando colocamos 'col-span-2' o elemento atrelado passa a ocupar dois espaços-->
+                    <!--Observação importante: as imagens e divs não mudam de tamanho. 
+                    O que muda de uma resolução para outra é o tamanho da bordas!-->
+                </div>
+                <h3 class="my-4 text-white">Conheça mais o nosso portfólio</h3>
+                <button class="block mx-auto mb-10 text-[#F6C03C] p-3 font-bold border border-[#F6C03C] border-2 hover:text-white hover:border-white">PORTFÓLIO</button>
+        </div>
+    <p class="tracking-widest text-2xl text-black font-bold font-sans pt-15 text-center">QUEM SOMOS</p>
+    <div class="w-16 h-1 bg-black mx-auto mt-4 mb-8"></div> <!--Tracinho debaixo dos nomes-->
+    <p class="mb-3 text-center">Conheça mais sobre o que acredita</p>
+    <button class="block mx-auto mb-10 w-auto  text-[#F6C03C] p-3 font-bold border border-[#F6C03C] border-2 hover:text-black hover:border-black">SOBRE</button>
+    </div>
+    <div class="flex justify-center flex items-center bg-[url(https://bikcraft.com/wp-content/uploads/2015/10/bg-footer.jpg)] bg-cover bg-center bg-no-repear h-[250px]"> 
+            <div class="flex flex-col flex wrap text-center w-60">
+                <div class="w-8 h-1 bg-white mx-auto mb-4"></div> <!--Tracinho branco-->
+                <p class="text-white font-bold"><q>o verdadeiro segredo da felicidade está em ter um genuíno interesse por todos os detalhes da vida cotidiana.</q></p>
+                <div class="w-8 h-1 bg-white mx-auto my-4 "></div> <!--Tracinho branco-->
+                <h2 class="text-white font-bold tracking-widest">WILLIAN MORRIS</h2>
+            </div>
+    </div>
+    <footer class="bg-black px-8 py-8 h-auto">
+        <div class="max-w-5xl mx-auto"> <!--div que permite que o grid fique centralizada, e não tão colado à borda-->
+        <div class="grid grid-cols-1 gap-3 md:grid-cols-4 align-items-center"> <!--div que organiza nosso layout-->
+            <div class="w-full h-full flex flex-col gap-2 md:col-span-2">
+                <h2 class="text-[#F6C03C] tracking-widest">NOSSA HISTORIA</h2>
+                <div class="w-12 h-1 bg-[#F6C03C]"></div>
+                <p class="text-white font-bold">Quando iniciamos a Bikcraft queriamos apenas um produto que adoraríamos utilizar. 
+                Eramos apaixonados por pedalar e também por fazer as coisas com as nossas próprias mãos. 
+                Assim surgiu um sonho na garagem da nossa casa.</p>
+            </div>
+            <div>
+                <h2 class="text-[#F6C03C] tracking-widest mb-2 font-bold">CONTATO</h2>
+                <div class="w-12 h-1 bg-[#F6C03C] mb-2 "></div>
+                <ul class="text-white font-bold">
+                    <li>+55 (85) 996972882</li>
+                    <li>raul.falcao@conpec.com.br</li>
+                    <li>Rua Dr Shigeo Mori, 844</li>
+                </ul>
+            </div>
+            <div>
+                 <h2 class="text-[#F6C03C] tracking-widest font-bold">REDES SOCIAIS</h2>
+                 <div class="w-12 h-1 bg-[#F6C03C] mb-2"></div>
+                 <div class="flex flex-row gap-2">
+                    <img class="border-4 border-[#F6C03C] p-3" src="https://bikcraft.com/wp-content/uploads/2019/08/facebook.svg">
+                    <img class="border border-4 border-[#F6C03C] p-3" src="https://bikcraft.com/wp-content/uploads/2019/08/instagram.svg">
+                    <img class="border border-4 border-[#F6C03C] p-3" src="https://bikcraft.com/wp-content/uploads/2019/08/twitter.svg">
+                 </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <p class="bg-[#F6C03C] font-bold font-sans px-4  py-8 text-sm">Bikeshop do Raul. Alguns direitos reservados</p>
+
+</body>
+</html>
