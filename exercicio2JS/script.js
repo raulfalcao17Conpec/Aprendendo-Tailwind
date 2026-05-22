@@ -14,11 +14,11 @@ function criarCaixinha(textoDaTarefa){ // Crio uma caixinha que será o comparti
         list_item.texto.classList.toggle("font-bold")
         list_item.botao.classList.toggle("bg-red-400")
         list_item.botao.classList.toggle("border-black") 
-    // Anteriormente, o problema esta a referência. O botão não sabia qual 'caixinha' alterar. Para isso, 
+    // Anteriormente, o problema estava na referência. O botão não sabia qual 'caixinha' alterar. Para consertar, 
     // usamos o o método '.classList', que retorna os atributos de classe de texto. Além disso,
-    // o '.toggle("line-through")', ele varia a presença de um elemento. Ou seja, se ele não existe, ele 
+    // o '.toggle("line-through")', varia a presença de um elemento. Ou seja, se ele não existe, ele 
     // cria, e se ele existe, ele remove. Nesse caso, o atributo de classe a ser "variado" é o "line-through",que traça 
-    // uma linha através dos elementos, indicando que ele a tarefa foi completa. 
+    // uma linha através dos elementos, indicando que a tarefa foi completa. 
     
     }) 
     
