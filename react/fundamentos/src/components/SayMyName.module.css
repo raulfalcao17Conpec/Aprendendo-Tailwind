@@ -1,0 +1,8 @@
+.textoContainer{
+    background-color:aquamarine;
+    border: 1px solid green;
+    margin: 100px
+}
+.textoContent{
+    color:white; 
+}
