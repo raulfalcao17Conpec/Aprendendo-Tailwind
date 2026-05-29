@@ -11,6 +11,7 @@ function Form({tituloForm,botaoForm}) {
       console.log("Usuário digitado:", name);
       console.log("Senha digitada:", password);
       window.alert("Parabéns! Seu doguinho foi registrado")
+      localStorage.setItem("nome",name)
       } else {
         window.alert("Complete os dois campos para finalizar registro")
         evento.preventDefault()

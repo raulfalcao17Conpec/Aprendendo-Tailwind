@@ -4,13 +4,21 @@ import Icone from '../Icone';
 import fotoDoUsuario from '../do-utilizador.png';
 import fotoAdd from '../add.png'
 import fotoSeta from '../seta.png'
+import { useState, useEffect } from 'react';
 function Account(){
+    const [nomeUsuario,setNomeUsuario]=useState("")
+    useEffect(()=>{
+        const nomeTela = localStorage.getItem("nome")
+        if(nomeTela){
+            setNomeUsuario(nomeTela)
+        }
+    },[])
     return(
         <div>
             <header className='my-4 flex justify-around'>
             <Logo />
             <div className="flex flex-row items-center gap-2">
-                <p >ra278711</p>
+                <p >{nomeUsuario}</p>
                 <Icone fotoIcone={fotoDoUsuario} alt="perfil"/>
             </div>
             </header>
@@ -27,21 +35,8 @@ function Account(){
                     </li>
                 </ul>
 
-            </section>
-
-
-
-
-
-
-
-
-
-            <Link to="/Login">Login/Criar</Link>    
+            </section>   
             </div>
-   
-
-
-)
+    )
 }
 export default Account
