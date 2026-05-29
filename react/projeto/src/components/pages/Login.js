@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
 import Form from '../Form';
 import Footer from '../Footer'
+import Logo from '../Logo'
 function Login({name,password}){
     return(
         <div className="h-auto">
-            <div className='my-4'>
-            <p className="font-bold font-corpo border-4 border-yellow-200 p-3 text-xl rounded-md w-32 ml-8">DogGram</p>
+            <div className='my-4 flex justify-center'>
+            <Logo tamanhoLogo="pequeno"/>
             </div>
             <div className="border-2 border-gray-200 h-0.5"></div>
             <div className="flex flex-row items-start">
@@ -13,7 +14,7 @@ function Login({name,password}){
                 alt="Cachorro resenha"
                 className="w-1/2 h-full"></img>
                 <div className="flex flex-col pl-8 pt-16">
-                    <Form tituloForm="Login"/>
+                    <Form tituloForm="Login" botaoForm="Entrar"/>
                     <h2 className="font-titulo text-2xl font-bold mt-12">Cadastre-se</h2>
                     <div className="border-2 border-gray-200 h-0.5 w-8"></div>
                     <p>Ainda não possui conta? Cadastre-se no site.</p>

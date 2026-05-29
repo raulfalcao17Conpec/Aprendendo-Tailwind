@@ -1,10 +1,11 @@
 import Form from '../Form';
 import Footer from '../Footer'
+import Logo from '../Logo'
 function Cadastro(){
     return (
         <div>
-            <div className='my-4'>
-            <p className="font-bold font-corpo border-4 border-yellow-200 p-3 text-xl rounded-md w-32 ml-8">DogGram</p>
+            <div className='my-4 flex justify-center'>
+            <Logo tamanhoLogo="pequeno"/>
             </div>
             <div className="border-2 border-gray-200 h-0.5"></div>
             <div className="flex flex-row items-center">
@@ -12,7 +13,7 @@ function Cadastro(){
                 alt="Cachorro resenha"
                 className="w-1/2"></img>
             <div className="pl-8">
-                <Form tituloForm="Cadastre-se"/>
+                <Form tituloForm="Cadastre-se" botaoForm="Cadastrar"/>
             </div>
                     
                 
